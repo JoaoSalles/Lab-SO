@@ -29,7 +29,7 @@
 #define CLUSTERSIZE 4096
 
 unsigned short fat[65536];
-
+  
 typedef struct {
        char used;
        char name[25];
@@ -46,6 +46,21 @@ int fs_init() {
 }
 
 int fs_format() {
+  // int i = 0;
+  // for (i = 0; i < 32; i++){ //Reserva os primeiros 32 agrupamento para o FAT
+  //   fat[i] = 3 //O valor que simpoliza fat
+  // }
+  // fat[32] = 4 //Valor representando a reserva para o diretorio de arquivo
+
+  // for(i = 33; i < 65536; i++){
+  //   fat[i] = 1 //Seta todo o valor restante da FAT para livre
+  // }
+
+  // for(i = 0; i < 128; i++){
+  //   dir[i].used = 0 //Seta todos os arquivos como nao usados
+  // }
+  // buffer = (char *) fat;
+  
   printf("Função não implementada: fs_format\n");
   return 0;
 }
